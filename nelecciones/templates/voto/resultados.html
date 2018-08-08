@@ -1,0 +1,115 @@
+{% extends "home/base_home.html" %}
+
+{% load staticfiles %}
+
+{% block title %}Resultados encuesta virtual {{region}} - {{provincia}} - {{distrito.name}} {% endblock %}
+
+{% block description %} resultados encuesta elecciones regionales y municipales Perú 2018 {{region}}, {{provincia}}, {{distrito.name}} {% endblock description %}
+
+{% block tags %}Resultados Elecciones 2018, Cusco, Resultados Encuesta elecciones 2018, {{region}} - {{provincia}} - {{distrito.name}}{% endblock tags %}
+
+{% block content %}
+  {% include "includes/header.html" %}
+  <div class="grid-container contenedor">
+    <div class="grid-x grid-margin-x">
+      <h1 class="cell ms-h-h2 color-ct-c19" style="margin-bottom: 1em;">Elecciones para el gobierno regional de Cusco.</h1>
+      <h3 class="cell ms-h-h11 color-ct-c2">{{msj}}</h3>
+      <div class="cell small-12 large-6">
+        <div class="ms-tab3">
+          <div class="ms-tab3__header">
+            <h3 class="ms-tab3__header__title">PRECIDENTE Y VICEPRECIDENTE REGIONAL</h3>
+          </div>
+          <div class="ms-tab3__subheader">
+            <h4 class="ms-tab3__subheader__title">Presione (click) sobre la foto del partido político por el que desea emitir su voto. (** únicamente podrá votar por un candidato y una sola vez al día.)</h4>
+          </div>
+          <div class="ms-tab3__body">
+            {% for c in resultados.regionales  %}
+              <div class="ms-tab3__body__i">
+                <p class="ms-tab3__body__i__name">{{c.electo__partido__name_large}}</p>
+                <div class="ms-tab3__body__i__left">
+                  <img  class="ms-tab3__body__i__img" src="/media/{{c.electo__partido__image}}">
+                  <p class="ms-tab3__body__i__text">
+                    {{c.porcentaje}} %
+                  </p>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+
+      <div class="cell small-12 large-6">
+        <div class="ms-tab3">
+          <div class="ms-tab3__header">
+            <h3 class="ms-tab3__header__title">CONSEJERO REGIONAL PROVINCIA DE {{provincia|upper}}</h3>
+          </div>
+          <div class="ms-tab3__subheader">
+            <h4 class="ms-tab3__subheader__title">Presione (click) sobre la foto del partido político por el que desea emitir su voto. (** únicamente podrá votar por un candidato y una sola vez al día.)</h4>
+          </div>
+          <div class="ms-tab3__body">
+            {% for c in resultados.consejeros  %}
+              <div class="ms-tab3__body__i">
+                <p class="ms-tab3__body__i__name">{{c.electo__partido__name_large}}</p>
+                <div class="ms-tab3__body__i__left">
+                  <img  class="ms-tab3__body__i__img" src="/media/{{c.electo__partido__image}}">
+                  <p class="ms-tab3__body__i__text">
+                    {{c.porcentaje}} %
+                  </p>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+
+      <div class="cell small-12 large-6">
+        <div class="ms-tab3">
+          <div class="ms-tab3__header">
+            <h3 class="ms-tab3__header__title">ALCALDE Y TENIENTE ALCALDE PROVINCIA DE {{provincia|upper}}</h3>
+          </div>
+          <div class="ms-tab3__subheader">
+            <h4 class="ms-tab3__subheader__title">Presione (click) sobre la foto del partido político por el que desea emitir su voto. (** únicamente podrá votar por un candidato y una sola vez al día.)</h4>
+          </div>
+          <div class="ms-tab3__body">
+            {% for c in resultados.provincias  %}
+              <div class="ms-tab3__body__i">
+                <p class="ms-tab3__body__i__name">{{c.electo__partido__name_large}}</p>
+                <div class="ms-tab3__body__i__left">
+                  <img  class="ms-tab3__body__i__img" src="/media/{{c.electo__partido__image}}">
+                  <p class="ms-tab3__body__i__text">
+                    {{c.porcentaje}} %
+                  </p>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+
+      <div class="cell small-12 large-6">
+        <div class="ms-tab3">
+          <div class="ms-tab3__header">
+            <h3 class="ms-tab3__header__title">ALCALDE Y TENIENTE ALCALDE DISTRITO DE {{distrito.name|upper}}</h3>
+          </div>
+          <div class="ms-tab3__subheader">
+            <h4 class="ms-tab3__subheader__title">Presione (click) sobre la foto del partido político por el que desea emitir su voto. (** únicamente podrá votar por un candidato y una sola vez al día.)</h4>
+          </div>
+          <div class="ms-tab3__body">
+            {% for c in resultados.distritos  %}
+              <div class="ms-tab3__body__i">
+                <p class="ms-tab3__body__i__name">{{c.electo__partido__name_large}}</p>
+                <div class="ms-tab3__body__i__left">
+                  <img  class="ms-tab3__body__i__img" src="/media/{{c.electo__partido__image}}">
+                  <p class="ms-tab3__body__i__text">
+                    {{c.porcentaje}} %
+                  </p>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% include "includes/footer.html" %}
+{% endblock content %}

@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% load  staticfiles %}
+
+{% block css %}
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_PE">
+  <meta property="og:site_name" content="Elecciones municipales y regionales Cusco">
+  <meta property="og:url" content="http://elecciones.neunapp.com/">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}?rand=23423423">
+{% endblock css %}
+
+{% block js %}
+  <script src="{% static 'js/jquery.min.js' %}"></script>
+  <script src="{% static 'js/foundation.min.js' %}"></script>
+  <script src="{% static 'js/app.js' %}"></script>
+  <script src="{% static 'js/scrips.js' %}"></script>
+
+{% endblock js %}
