@@ -35,7 +35,8 @@ class ProvinciasListView(ListView):
 
     def get_queryset(self):
         #recuperamos el valor por GET
-        pk_departamento = self.kwargs.get('pk', 0)
+        # pk_departamento = self.kwargs.get('pk', 0)
+        pk_departamento = 8
         return Provincia.objects.filter(
             departamento__id=pk_departamento
         )
@@ -74,9 +75,9 @@ class ProvinciasRListView(ListView):
 
     def get_queryset(self):
         #recuperamos el valor por GET
-        pk_departamento = self.kwargs.get('pk', 0)
+        # pk_departamento = self.kwargs.get('pk', 0)
         return Provincia.objects.filter(
-            departamento__id=pk_departamento
+            departamento__id=8
         )
 
 
@@ -92,3 +93,6 @@ class DistritoRListView(ListView):
         return Distrito.objects.filter(
             provincia__id=pk_pro
         )
+
+class ContactoTemplateView(TemplateView):
+    template_name = 'home/contacto.html'

@@ -2,7 +2,7 @@
 
 {% load staticfiles %}
 
-{% block title %} Encuesta Elecciones Regionales por distrito{% endblock %}
+{% block title %} Encuesta Elecciones Municipales Cusco{% endblock %}
 
 {% block description %} Sitio web para encuestas de las elecciones regionales y municipales Perú 2018 {% endblock description %}
 
@@ -12,7 +12,7 @@
   {% include "includes/header.html" %}
   <div class="grid-container contenedor">
     <div class="grid-x grid-margin-x">
-      <h1 class="cell ms-h-h2 color-ct-c19" style="margin-bottom: 1em;">¿De qué Provincia eres?</h1>
+      <h1 class="cell ms-h-h2 color-ct-c19" style="margin-bottom: 1em;">¿De qué Provincia de Cusco Eres?</h1>
       {% for d in provincias %}
         <div class="cell small-6 medium-4 large-3">
           <a href="{% url 'home_app:distritos_list' d.pk %}" class="ms-bt7-1 color-ct-c15">{{d.name}}</a>

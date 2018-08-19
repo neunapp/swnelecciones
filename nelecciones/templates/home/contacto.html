@@ -1,0 +1,24 @@
+{% extends "home/base_home.html" %}
+
+{% load staticfiles %}
+
+{% block title %} Envia los datos de tu candidato{% endblock %}
+
+{% block description %} Sitio web para encuestas de las elecciones regionales y municipales Perú 2018 {% endblock description %}
+
+{% block tags %}Elecciones 2018, Cusco, Resultados Encuesta elecciones 2018{% endblock tags %}
+
+{% block content %}
+  {% include "includes/header.html" %}
+  <div class="grid-container contenedor">
+    <div class="grid-x grid-margin-x align-center">
+      <div class="cell small-12 large-7">
+        <div class="ms-card3">
+          <h3 class="ms-card3__title color-ct-c9">¿Tu candidato no esta en la encuesta?</h3>
+          <p class="ms-card3__text color-ct-c15">Si tu candidato no está en la encuesta, por favor envíanos un correo detallando los datos de tu candidato a: <B>neunapp.servicios@gmail.com</B>. una vez que envíes los datos verificaremos su veracidad y registraremos a tu candidato.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% include "includes/footer.html" %}
+{% endblock content %}
