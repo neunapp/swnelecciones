@@ -22,7 +22,7 @@ class VotoRegionManager(models.Manager):
         poblacion = float(consulta.count())
         # agrupamos consulta
         resultados = consulta.values(
-            'electo__id',
+            'electo__partido__id',
             'electo__partido__name_large',
             'electo__partido__image'
         ).annotate(
@@ -46,7 +46,7 @@ class VotoRegionManager(models.Manager):
         poblacion = float(consulta.count())
         # agrupamos consulta
         resultados = consulta.values(
-            'electo__id',
+            'electo__partido__id',
             'electo__partido__name_large',
             'electo__partido__image'
         ).annotate(
@@ -76,7 +76,7 @@ class VotoConsejeroManager(models.Manager):
         poblacion = float(consulta.count())
         # agrupamos consulta
         resultados = consulta.values(
-            'electo__id',
+            'electo__partido__id',
             'electo__partido__name_large',
             'electo__partido__image'
         ).annotate(
@@ -100,7 +100,7 @@ class VotoConsejeroManager(models.Manager):
         poblacion = float(consulta.count())
         # agrupamos consulta
         resultados = consulta.values(
-            'electo__id',
+            'electo__partido__id',
             'electo__partido__name_large',
             'electo__partido__image'
         ).annotate(
@@ -130,7 +130,7 @@ class VotoProvinciaManager(models.Manager):
         poblacion = float(consulta.count())
         # agrupamos consulta
         resultados = consulta.values(
-            'electo__id',
+            'electo__partido__id',
             'electo__partido__name_large',
             'electo__partido__image'
         ).annotate(
@@ -154,7 +154,7 @@ class VotoProvinciaManager(models.Manager):
         poblacion = float(consulta.count())
         # agrupamos consulta
         resultados = consulta.values(
-            'electo__id',
+            'electo__partido__id',
             'electo__partido__name_large',
             'electo__partido__image'
         ).annotate(
@@ -184,7 +184,7 @@ class VotoDistritoManager(models.Manager):
         poblacion = float(consulta.count())
         # agrupamos consulta
         resultados = consulta.values(
-            'electo__id',
+            'electo__partido__id',
             'electo__partido__name_large',
             'electo__partido__image'
         ).annotate(
@@ -208,7 +208,7 @@ class VotoDistritoManager(models.Manager):
         poblacion = float(consulta.count())
         # agrupamos consulta
         resultados = consulta.values(
-            'electo__id',
+            'electo__partido__id',
             'electo__partido__name_large',
             'electo__partido__image'
         ).annotate(
