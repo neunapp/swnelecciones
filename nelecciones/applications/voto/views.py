@@ -58,7 +58,7 @@ class ListaCandidatosView(ListView):
         #
         consulta = {
             'regionales': CandidatoDepartamento.objects.filter(departamento__id=distrito.provincia.departamento.pk),
-            'consejeros': ConsejeroDepartamento.objects.filter(departamento__id=distrito.provincia.departamento.pk),
+            'consejeros': ConsejeroDepartamento.objects.filter(provincia__id=distrito.provincia.pk),
             'provincias': CandidatoProvincia.objects.filter(provincia__id=distrito.provincia.pk),
             'distritos': CandidatoDistrito.objects.filter(distrito__id=distrito.pk),
         }
