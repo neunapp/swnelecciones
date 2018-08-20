@@ -70,7 +70,7 @@ class ConsejeroDepartamento(TimeStampedModel):
         ordering = ['partido__name']
 
     def __str__(self):
-        return self.departamento.name + '-' + self.partido.name
+        return self.provincia.name + '-' + self.partido.name
 
 
 @python_2_unicode_compatible
