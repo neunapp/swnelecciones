@@ -29,12 +29,12 @@ class ConsejeroAdmin(admin.ModelAdmin):
 
     list_display = (
         'partido',
-        'departamento',
+        'provincia',
         'candidato',
     )
     #
     search_fields = ('candidato',)
-    list_filter = ('departamento',)
+    list_filter = ('provincia',)
 
 
 class ProvinciaAdmin(admin.ModelAdmin):

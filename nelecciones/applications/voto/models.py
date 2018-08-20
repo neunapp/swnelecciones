@@ -60,7 +60,7 @@ class ConsejeroDepartamento(TimeStampedModel):
     """ modelo para registro de candidato departamental """
 
     partido = models.ForeignKey(PartidoPolitico, on_delete=models.CASCADE)
-    departamento = models.ForeignKey(Departamento, on_delete=models.CASCADE)
+    provincia = models.ForeignKey(Provincia, on_delete=models.CASCADE)
     candidato = models.CharField('nombre candidato', max_length=200, blank=True)
     foto = models.ImageField(upload_to="consejero",  blank=True, null=True)
 
