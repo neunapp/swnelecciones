@@ -29,7 +29,7 @@ class VotoRegionManager(models.Manager):
             votos=Count('ippc', output_field=FloatField()),
         ).annotate(
             porcentaje=F('votos')*100/poblacion,
-        )
+        ).order_by('-porcentaje')
         return resultados
 
     def lista_resultados_30(self):
@@ -83,7 +83,7 @@ class VotoConsejeroManager(models.Manager):
             votos=Count('ippc', output_field=FloatField()),
         ).annotate(
             porcentaje=F('votos')*100/poblacion,
-        )
+        ).order_by('-porcentaje')
         return resultados
 
     def lista_resultados_30(self):
@@ -137,7 +137,7 @@ class VotoProvinciaManager(models.Manager):
             votos=Count('ippc', output_field=FloatField()),
         ).annotate(
             porcentaje=F('votos')*100/poblacion,
-        )
+        ).order_by('-porcentaje')
         return resultados
 
     def lista_resultados_30(self):
@@ -191,7 +191,7 @@ class VotoDistritoManager(models.Manager):
             votos=Count('ippc', output_field=FloatField()),
         ).annotate(
             porcentaje=F('votos')*100/poblacion,
-        )
+        ).order_by('-porcentaje')
         return resultados
 
 
