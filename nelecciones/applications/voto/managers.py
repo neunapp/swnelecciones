@@ -22,7 +22,7 @@ class VotoRegionManager(models.Manager):
         poblacion = float(consulta.count())
         # agrupamos consulta
         resultados = consulta.values(
-            'electo__partido__id',
+            'electo__id',
             'electo__partido__name_large',
             'electo__partido__image'
         ).annotate(
@@ -76,7 +76,7 @@ class VotoConsejeroManager(models.Manager):
         poblacion = float(consulta.count())
         # agrupamos consulta
         resultados = consulta.values(
-            'electo__partido__id',
+            'electo__id',
             'electo__partido__name_large',
             'electo__partido__image'
         ).annotate(
@@ -130,7 +130,7 @@ class VotoProvinciaManager(models.Manager):
         poblacion = float(consulta.count())
         # agrupamos consulta
         resultados = consulta.values(
-            'electo__partido__id',
+            'electo__id',
             'electo__partido__name_large',
             'electo__partido__image'
         ).annotate(
@@ -184,7 +184,7 @@ class VotoDistritoManager(models.Manager):
         poblacion = float(consulta.count())
         # agrupamos consulta
         resultados = consulta.values(
-            'electo__partido__id',
+            'electo__id',
             'electo__partido__name_large',
             'electo__partido__image'
         ).annotate(
@@ -193,6 +193,7 @@ class VotoDistritoManager(models.Manager):
             porcentaje=F('votos')*100/poblacion,
         )
         return resultados
+
 
     def lista_resultados_30(self):
         """Consulta para recuperar resultados ordenados"""

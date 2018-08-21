@@ -123,7 +123,6 @@ class VotoRegion(TimeStampedModel):
         unique_together = ('ippc', 'date')
         verbose_name = 'Votos Presidente Regional'
         verbose_name_plural = 'Votos Presidente Regional'
-        ordering = ['date']
 
     def __str__(self):
         return self.electo.partido.name
@@ -143,7 +142,6 @@ class VotoConsejero(TimeStampedModel):
         unique_together = ('ippc', 'date')
         verbose_name = 'Votos Consejero'
         verbose_name_plural = 'Votos Consejero'
-        ordering = ['date']
 
     def __str__(self):
         return self.electo.partido.name
@@ -163,7 +161,6 @@ class VotoProvincia(TimeStampedModel):
         unique_together = ('ippc', 'date')
         verbose_name = 'Votos Provincia'
         verbose_name_plural = 'Votos Provincia'
-        ordering = ['date']
 
     def __str__(self):
         return self.electo.partido.name
@@ -183,7 +180,6 @@ class VotoDistrito(TimeStampedModel):
         unique_together = ('ippc', 'date')
         verbose_name = 'Votos Distrito'
         verbose_name_plural = 'Votos Distrito'
-        ordering = ['date']
 
     def __str__(self):
         return self.electo.partido.name
