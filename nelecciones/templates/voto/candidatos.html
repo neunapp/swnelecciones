@@ -25,7 +25,10 @@
           <div class="ms-tab3__body">
             {% for c in candidatos.regionales  %}
               <div class="ms-tab3__body__i">
-                <p class="ms-tab3__body__i__name">{{c.partido.name_large}}</p>
+                <p class="ms-tab3__body__i__name">
+                  <span class="ms-tab3__body__i__name__1">{{c.partido.name_large}}</span>
+                  <span class="ms-tab3__body__i__name__2 color-ct-c19">{{c.candidato}}</span>
+                </p>
                 <div class="ms-tab3__body__i__left">
                   <a href="{% url 'voto_app:cedula_add' c.pk '0' distrito.pk %}" class="ms-tab3__body__i__link">
                     <img  class="ms-tab3__body__i__link__img" src="{{c.foto.url}}">
@@ -51,7 +54,10 @@
           <div class="ms-tab3__body">
             {% for c in candidatos.consejeros  %}
               <div class="ms-tab3__body__i">
-                <p class="ms-tab3__body__i__name">{{c.partido.name_large}}</p>
+                <p class="ms-tab3__body__i__name">
+                  <span class="ms-tab3__body__i__name__1">{{c.partido.name_large}}</span>
+                  <span class="ms-tab3__body__i__name__2 color-ct-c19">{{c.candidato}}</span>
+                </p>
                 <div class="ms-tab3__body__i__left">
                   <a href="{% url 'voto_app:cedula_add' c.pk '1' distrito.pk %}" class="ms-tab3__body__i__link">
                     <img  class="ms-tab3__body__i__link__img" src="{{c.foto.url}}">
@@ -77,7 +83,10 @@
           <div class="ms-tab3__body">
             {% for c in candidatos.provincias  %}
               <div class="ms-tab3__body__i">
-                <p class="ms-tab3__body__i__name">{{c.partido.name_large}}</p>
+                <p class="ms-tab3__body__i__name">
+                  <span class="ms-tab3__body__i__name__1">{{c.partido.name_large}}</span>
+                  <span class="ms-tab3__body__i__name__2 color-ct-c19">{{c.candidato}}</span>
+                </p>
                 <div class="ms-tab3__body__i__left">
                   <a href="{% url 'voto_app:cedula_add' c.pk '2' distrito.pk %}" class="ms-tab3__body__i__link">
                     <img  class="ms-tab3__body__i__link__img" src="{{c.foto.url}}">
@@ -103,7 +112,10 @@
           <div class="ms-tab3__body">
             {% for c in candidatos.distritos  %}
               <div class="ms-tab3__body__i">
-                <p class="ms-tab3__body__i__name">{{c.partido.name_large}}</p>
+                <p class="ms-tab3__body__i__name">
+                  <span class="ms-tab3__body__i__name__1">{{c.partido.name_large}}</span>
+                  <span class="ms-tab3__body__i__name__2 color-ct-c19">{{c.candidato}}</span>
+                </p>
                 <div class="ms-tab3__body__i__left">
                   <a href="{% url 'voto_app:cedula_add' c.pk '3' distrito.pk %}" class="ms-tab3__body__i__link">
                     <img  class="ms-tab3__body__i__link__img" src="{{c.foto.url}}">
