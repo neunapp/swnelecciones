@@ -86,10 +86,10 @@ class ListaResultadosView(ListView):
         distrito = Distrito.objects.get(pk=pk_distrito)
         #
         consulta = {
-            'regionales': VotoRegion.objects.lista_resultados_7(),
-            'consejeros': VotoConsejero.objects.lista_resultados_7(),
-            'provincias': VotoProvincia.objects.lista_resultados_7(),
-            'distritos': VotoDistrito.objects.lista_resultados_7(),
+            'regionales': VotoRegion.objects.lista_resultados_7(distrito),
+            'consejeros': VotoConsejero.objects.lista_resultados_7(distrito),
+            'provincias': VotoProvincia.objects.lista_resultados_7(distrito),
+            'distritos': VotoDistrito.objects.lista_resultados_7(distrito),
         }
         return consulta
 

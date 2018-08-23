@@ -25,7 +25,10 @@
           <div class="ms-tab3__body">
             {% for c in resultados.regionales  %}
               <div class="ms-tab3__body__i">
-                <p class="ms-tab3__body__i__name">{{c.electo__partido__name_large}}</p>
+                <p class="ms-tab3__body__i__name">
+                  <span class="ms-tab3__body__i__name__1">{{c.electo__partido__name_large}}</span>
+                  <span class="ms-tab3__body__i__name__2 color-ct-c19">{{c.electo__candidato}}</span>
+                </p>
                 <div class="ms-tab3__body__i__left">
                   <img  class="ms-tab3__body__i__img" src="/media/{{c.electo__partido__image}}">
                   <p class="ms-tab3__body__i__text">
@@ -47,9 +50,12 @@
             <h4 class="ms-tab3__subheader__title">Presione (click) sobre la foto del partido político por el que desea emitir su voto. (** únicamente podrá votar por un candidato y una sola vez al día.)</h4>
           </div>
           <div class="ms-tab3__body">
-            {% for c in resultados.consejeros  %}
+            {% for co in resultados.consejeros  %}
               <div class="ms-tab3__body__i">
-                <p class="ms-tab3__body__i__name">{{c.electo__partido__name_large}}</p>
+                <p class="ms-tab3__body__i__name">
+                  <span class="ms-tab3__body__i__name__1">{{co.electo__partido__name_large}}</span>
+                  <span class="ms-tab3__body__i__name__2 color-ct-c19">{{co.electo__candidato}}</span>
+                </p>
                 <div class="ms-tab3__body__i__left">
                   <img  class="ms-tab3__body__i__img" src="/media/{{c.electo__partido__image}}">
                   <p class="ms-tab3__body__i__text">
@@ -71,13 +77,16 @@
             <h4 class="ms-tab3__subheader__title">Presione (click) sobre la foto del partido político por el que desea emitir su voto. (** únicamente podrá votar por un candidato y una sola vez al día.)</h4>
           </div>
           <div class="ms-tab3__body">
-            {% for c in resultados.provincias  %}
+            {% for p in resultados.provincias  %}
               <div class="ms-tab3__body__i">
-                <p class="ms-tab3__body__i__name">{{c.electo__partido__name_large}}</p>
+                <p class="ms-tab3__body__i__name">
+                  <span class="ms-tab3__body__i__name__1">{{p.electo__partido__name_large}}</span>
+                  <span class="ms-tab3__body__i__name__2 color-ct-c19">{{p.electo__candidato}}</span>
+                </p>
                 <div class="ms-tab3__body__i__left">
-                  <img  class="ms-tab3__body__i__img" src="/media/{{c.electo__partido__image}}">
+                  <img  class="ms-tab3__body__i__img" src="/media/{{p.electo__partido__image}}">
                   <p class="ms-tab3__body__i__text">
-                    {{c.porcentaje|floatformat:1}} %
+                    {{p.porcentaje|floatformat:1}} %
                   </p>
                 </div>
               </div>
@@ -95,13 +104,16 @@
             <h4 class="ms-tab3__subheader__title">Presione (click) sobre la foto del partido político por el que desea emitir su voto. (** únicamente podrá votar por un candidato y una sola vez al día.)</h4>
           </div>
           <div class="ms-tab3__body">
-            {% for c in resultados.distritos  %}
+            {% for d in resultados.distritos  %}
               <div class="ms-tab3__body__i">
-                <p class="ms-tab3__body__i__name">{{c.electo__partido__name_large}}</p>
+                <p class="ms-tab3__body__i__name">
+                  <span class="ms-tab3__body__i__name__1">{{d.electo__partido__name_large}}</span>
+                  <span class="ms-tab3__body__i__name__2 color-ct-c19">{{d.electo__candidato}}</span>
+                </p>
                 <div class="ms-tab3__body__i__left">
-                  <img  class="ms-tab3__body__i__img" src="/media/{{c.electo__partido__image}}">
+                  <img  class="ms-tab3__body__i__img" src="/media/{{d.electo__partido__image}}">
                   <p class="ms-tab3__body__i__text">
-                    {{c.porcentaje|floatformat:1}} %
+                    {{d.porcentaje|floatformat:1}} %
                   </p>
                 </div>
               </div>
